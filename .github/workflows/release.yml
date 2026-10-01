@@ -1,6 +1,6 @@
 name: Release
 
-# Push a tag like v1.0.0 to build the app and publish a GitHub Release.
+# Push a tag like v0.0.1 to build the app and publish a GitHub Release.
 on:
   push:
     tags: ["v*"]
