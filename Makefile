@@ -23,7 +23,8 @@ HDR      := src/meta.h src/objc.h
 
 all: $(BUNDLE)
 
-$(BUNDLE): $(BIN) $(BUNDLE)/Contents/Info.plist $(BUNDLE)/Contents/Resources/AppIcon.icns
+$(BUNDLE): $(BIN) $(BUNDLE)/Contents/Info.plist $(BUNDLE)/Contents/Resources/AppIcon.icns \
+           $(BUNDLE)/Contents/Resources/LICENSE
 	codesign --force --sign - $(BUNDLE) >/dev/null 2>&1 || true
 	@touch $(BUNDLE)
 
@@ -36,6 +37,10 @@ $(BIN): $(BUILD)/$(APP)
 	cp $< $@
 
 $(BUNDLE)/Contents/Info.plist: resources/Info.plist
+	@mkdir -p $(dir $@)
+	cp $< $@
+
+$(BUNDLE)/Contents/Resources/LICENSE: LICENSE
 	@mkdir -p $(dir $@)
 	cp $< $@
 
@@ -58,6 +63,7 @@ dist: all
 	codesign --verify --deep --strict $(BUNDLE)
 	ditto -c -k --keepParent $(BUNDLE) $(DIST)/$(APP).zip
 	cp -R $(BUNDLE) $(DIST)/dmg/
+	cp LICENSE $(DIST)/dmg/LICENSE.txt
 	ln -s /Applications $(DIST)/dmg/Applications
 	hdiutil create -quiet -volname "$(APP) $(VERSION)" -srcfolder $(DIST)/dmg -fs HFS+ -format UDZO -ov $(DIST)/$(APP).dmg
 	rm -rf $(DIST)/dmg

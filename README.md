@@ -52,7 +52,7 @@ make clean
 ```
 
 To publish a release, bump `CFBundleShortVersionString` in
-`resources/Info.plist`, then push a matching tag (`git tag v0.0.2 && git push --tags`).
+`resources/Info.plist`, then push a matching tag (`git tag v0.0.3 && git push --tags`).
 GitHub Actions builds the app and attaches the dmg and zip to a new GitHub Release.
 
 From the terminal:
