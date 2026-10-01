@@ -1,0 +1,29 @@
+name: Release
+
+# Push a tag like v1.0.0 to build the app and publish a GitHub Release.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: make dist
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            build/dist/photo-meta.dmg build/dist/photo-meta.zip build/dist/SHA256SUMS \
+            --title "photo-meta ${GITHUB_REF_NAME#v}" \
+            --notes-file .github/release-notes.md
