@@ -7,6 +7,9 @@
  *   photo-meta                 launch the app
  *   photo-meta <file>          launch and open a photo
  *   photo-meta --dump <file>   print all metadata to stdout (no UI)
+ *
+ * Copyright (c) 2026 Dennis Metzger
+ * SPDX-License-Identifier: MIT
  */
 #include "meta.h"
 #include "objc.h"

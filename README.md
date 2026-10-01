@@ -88,6 +88,12 @@ src/meta.c/.h     metadata extraction and formatting (no UI)
 src/main.c        the AppKit UI, menus, drag & drop, CLI entry point
 tools/make_icon.c renders the app icon with CoreGraphics at build time
 resources/        Info.plist
+LICENSE           MIT License
 install.sh        one-line installer for the latest GitHub release
 .github/          release workflow (builds + publishes on v* tags)
 ```
+
+## License
+
+photo-meta is released under the [MIT License](LICENSE).
+Copyright (c) 2026 Dennis Metzger.

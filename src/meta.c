@@ -3,6 +3,9 @@
  * (file attributes, image properties, TIFF, Exif, ExifAux, GPS, IPTC,
  * format-specific dictionaries, XMP and maker notes) and turns it into
  * a flat list of human-friendly rows plus a short summary.
+ *
+ * Copyright (c) 2026 Dennis Metzger
+ * SPDX-License-Identifier: MIT
  */
 #include "meta.h"
 #include "objc.h"

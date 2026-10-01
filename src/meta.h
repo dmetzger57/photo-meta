@@ -1,5 +1,8 @@
 /*
  * meta.h — photo metadata extraction (ImageIO / CoreFoundation, no UI).
+ *
+ * Copyright (c) 2026 Dennis Metzger
+ * SPDX-License-Identifier: MIT
  */
 #ifndef PHOTO_META_META_H
 #define PHOTO_META_META_H

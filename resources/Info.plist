@@ -40,7 +40,7 @@
 	<key>NSHighResolutionCapable</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>A tiny photo metadata viewer written in C.</string>
+	<string>Copyright © 2026 Dennis Metzger. Released under the MIT License.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Dennis Metzger
+# SPDX-License-Identifier: MIT
+
 APP      := photo-meta
 BUILD    := build
 BUNDLE   := $(BUILD)/$(APP).app

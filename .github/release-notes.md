@@ -17,3 +17,5 @@ xattr -dr com.apple.quarantine /Applications/photo-meta.app
 ```
 
 The install script doesn't need this step.
+
+photo-meta is open source under the [MIT License](https://github.com/dmetzger57/photo-meta/blob/main/LICENSE).

@@ -4,6 +4,9 @@
 #   curl -fsSL https://raw.githubusercontent.com/dmetzger57/photo-meta/main/install.sh | bash
 #
 # Set PHOTO_META_DIR to install somewhere else (e.g. PHOTO_META_DIR=~/Applications).
+#
+# Copyright (c) 2026 Dennis Metzger
+# SPDX-License-Identifier: MIT
 set -euo pipefail
 
 REPO="dmetzger57/photo-meta"

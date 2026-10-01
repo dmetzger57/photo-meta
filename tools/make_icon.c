@@ -6,6 +6,9 @@
  * Everything is drawn on a 1024-unit canvas and scaled to each size.
  *
  *   make_icon <out.iconset>    writes icon_*.png files for iconutil
+ *
+ * Copyright (c) 2026 Dennis Metzger
+ * SPDX-License-Identifier: MIT
  */
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreGraphics/CoreGraphics.h>

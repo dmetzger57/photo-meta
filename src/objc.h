@@ -5,6 +5,9 @@
  * prototype of the method being called (required for correctness on arm64).
  * No method used by this program returns a struct, so objc_msgSend_stret is
  * never needed and the same code works on x86_64.
+ *
+ * Copyright (c) 2026 Dennis Metzger
+ * SPDX-License-Identifier: MIT
  */
 #ifndef PHOTO_META_OBJC_H
 #define PHOTO_META_OBJC_H
